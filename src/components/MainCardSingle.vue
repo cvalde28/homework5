@@ -11,6 +11,7 @@ const username = faker.person.username({firstName: firstname, lastname:lastName}
 
 <template>
     <!-- {{ fullname }} <br /> -->
+      <RouterLink :to="{ name: 'CardDetails', params: { id: username}}">
       <div class="border border-gray-400 rounded-lg shadow bg-gray-200 h-full">
         <img :src="faker.image.urlLoremFlicker({category: 'cat'})" class="rounded-t-xl" />
       <div class="p-4">
@@ -19,4 +20,5 @@ const username = faker.person.username({firstName: firstname, lastname:lastName}
         <p class="mb-3 font-normal text-gray-700">{{ bio }}</p>
     </div>
     </div>
+    </RouterLink>
 </template>
